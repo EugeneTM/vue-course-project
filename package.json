@@ -1,0 +1,32 @@
+{
+  "name": "vue-course-project",
+  "private": true,
+  "version": "0.5.0",
+  "description": "Проект курса по Vue 3",
+  "author": "Eugene K <ekachalin@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .vue,.js,.jsx,.ts,.tsx --fix --ignore-path .gitignore",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "gsap": "^3.11.5",
+    "klona": "^2.0.6",
+    "pinia": "^2.0.35",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.2",
+    "vue-eslint-parser": "^9.2.0"
+  }
+}
