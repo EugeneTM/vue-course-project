@@ -1,5 +1,5 @@
 <template>
-  <div><slot /> (Task 06-wrappers/02-UiButton)</div>
+  <button :type="type" class="button" :class="[{ 'button_block': block }, buttonClass]"><slot /></button>
 </template>
 
 <script>
@@ -7,6 +7,32 @@
 
 export default {
   name: 'UiButton',
+
+  props: {
+
+    variant: {
+      type: String,
+      validator: (value) => ['primary', 'secondary', 'danger'].includes(value),
+      default: 'secondary',
+    },
+
+    block: {
+      type: Boolean,
+      default: false,
+    },
+
+    type: {
+      type: String,
+      default: 'button',
+    }
+  },
+
+  computed: {
+    buttonClass() {
+      return `button_${this.variant}`;
+    },
+  }
+
 };
 </script>
 

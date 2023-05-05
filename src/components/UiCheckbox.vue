@@ -1,5 +1,9 @@
 <template>
-  <div><slot /> (Task 06-wrappers/04-UiCheckbox)</div>
+  <label class="checkbox">
+      <input type="checkbox" class="checkbox__input" v-model="checkModel" v-bind="$attrs" ref="input"/>
+      <span class="checkbox__box"></span>
+      <slot />
+    </label>
 </template>
 
 <script>
@@ -7,6 +11,28 @@
 
 export default {
   name: 'UiCheckbox',
+
+  inheritAttrs: false,
+
+  props: {
+    modelValue: {
+      type: [Boolean, Array, Set],
+      required: true,
+    },
+  },
+
+  emits: ['update:modelValue'],
+
+  computed: {
+    checkModel: {
+      get() {
+        return this.modelValue;
+      },
+      set(data) {
+        this.$emit('update:modelValue', data);
+      }
+    }
+  }
 };
 </script>
 

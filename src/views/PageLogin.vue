@@ -37,7 +37,7 @@ export default {
   },
 
   setup() {
-    // TODO: <title> "Вход | Meetups"
+    document.title = "Вход | Meetups";
     // TODO: Добавить LayoutAuth
 
     /*

@@ -16,6 +16,16 @@ export const routes = [
     component: () => import('../views/PageMeetups.vue'),
   },
   {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/PageLogin.vue'),
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/PageRegister.vue'),
+  },
+  {
     path: '/meetups',
     name: 'meetups',
     redirect: { name: 'index' },

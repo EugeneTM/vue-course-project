@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <UiContainer>&copy; 2022-{{ new Date().getFullYear() }}</UiContainer>
+    <UiContainer>&copy; {{ new Date().getFullYear() }} Eugene</UiContainer>
   </footer>
 </template>
 
